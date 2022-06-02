@@ -2,11 +2,13 @@
 <div class="field centered">
     <form class="form" [formGroup]="authForm">
         <h2>Create an account</h2>
-        <div class="titles">
+        <!--<div class="titles">
             <label for="">Username:</label>
         </div>
-        <input class="input" formControlName="username">
+        <input class="input" formControlName="username">-->
+        <app-input label="Username" [control]="$any(authForm.get('username'))"></app-input>
         {{ authForm.get('username')!.errors | json }}
+        
         <div class="titles">
             <label for="">Password:</label>
         </div>

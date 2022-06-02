@@ -1,18 +1,17 @@
 import { Injectable } from '@angular/core'
-import { HttpClient } from '@angular/common/http'
 import { AbstractControl, AsyncValidator } from '@angular/forms'
 import { map, catchError } from 'rxjs/operators'
 import { of } from 'rxjs'
+import { AuthService } from '../auth.service'
 
 @Injectable({ providedIn: 'root'})
 export class UniqueUsername  implements AsyncValidator {
-    constructor(private http: HttpClient){}
+    constructor(private authService: AuthService){}
 
     validate = (control: AbstractControl) =>{
         const { value } = control
-        const res = this.http.post<any>('https://api.angular-email.com/auth/username',{
-            username: value
-        }).pipe(
+        return this.authService.usernameAvailable(value)
+        .pipe(
             map(() => {
                 return null
             }),
@@ -25,6 +24,5 @@ export class UniqueUsername  implements AsyncValidator {
                 }
             })
         )
-        return res
     }
 }

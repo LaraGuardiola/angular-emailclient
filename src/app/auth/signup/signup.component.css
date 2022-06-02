@@ -18,9 +18,6 @@
  h2{
      font-size: 30px;
      font-weight: bold;
+     white-space: nowrap;
  }
 
- .titles {
-     width: 100%;
-     font-weight: bold;
- }
