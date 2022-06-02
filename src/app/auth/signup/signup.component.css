@@ -1,6 +1,6 @@
 .form {
     width: 60%;
-    height: 95vh;
+    height: 100vmax;
     display: flex;
     align-items: center;
     justify-content: center;
