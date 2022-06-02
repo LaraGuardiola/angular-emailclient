@@ -37,11 +37,3 @@
      width: 360px;
  }
 
- /* make 100vh look great without scroll in mobile */
- body {
-     display: flex;
-     justify-content: center;
-     align-items: center;
-        flex-direction: column;
-    height: calc(var(--vh, 1vh) * 100);
-  }

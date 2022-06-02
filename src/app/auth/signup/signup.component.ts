@@ -39,6 +39,7 @@ export class SignupComponent implements OnInit {
     window.addEventListener('resize', this.resize)
   }
 
+  //sets up the size to the exact 100% for mobile!
   resize() {
     let vh = window.innerHeight * 0.01;
     let form = document.querySelector('.form')
