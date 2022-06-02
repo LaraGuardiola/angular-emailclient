@@ -26,3 +26,11 @@
      margin-top: 1.5em;
  }
 
+ p {
+    font-size: 12px;
+    color: red;
+ }
+
+ .special {
+     width: 360px;
+ }

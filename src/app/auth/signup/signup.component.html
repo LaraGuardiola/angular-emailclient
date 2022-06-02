@@ -24,9 +24,24 @@
         
         <app-input label="Password confirmation" type="password" [control]="$any(authForm.get('passwordConfirmation'))"></app-input>
         
+        <div class="special">
+            <ng-container 
+            *ngIf="
+                $any(authForm.get('password')).touched &&
+                $any(authForm.get('passwordConfirmation')).touched &&
+                authForm.errors" 
+            class="field"
+        >
+            <p *ngIf="authForm.errors!['passwordsDontMatch']">
+                Passwords don't match
+            </p>
+        </ng-container>
+        </div>
+        
+
         <button class="button is-link">Submit</button>
 
-        {{ authForm.errors | json }}
+            
         
     </form>
 </div>
