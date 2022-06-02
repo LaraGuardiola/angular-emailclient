@@ -2,5 +2,34 @@
     <div class="titles">
         <label>{{ label }}</label>
     </div>
-    <input class="input" [formControl]="control">
+    <input [type]="type" class="input" [formControl]="control">
+    <div *ngIf="showErrors()" class="field">
+        <p class="helper-msg" *ngIf="control.errors!['required']">
+            value is required
+        </p>
+        <p class="helper-msg" *ngIf="control.errors!['minlength']">
+            value you entered is 
+            {{ control.errors!['minlength'].actualLength }}
+            characters long, minimum
+            {{ control.errors!['minlength'].requiredLength }}
+            characters
+        </p>
+        <p class="helper-msg" *ngIf="control.errors!['maxlength']">
+            value you entered is 
+            {{ control.errors!['maxlength'].actualLength }}
+            characters long, but cannot be longer than
+            {{ control.errors!['maxlength'].requiredLength }}
+            characters
+        </p>
+        <p class="helper-msg" *ngIf="control.errors!['pattern']">
+            Invalid format
+        </p>
+        <p class="helper-msg" *ngIf="control.errors!['nonUniqueUsername']">
+            Username is taken
+        </p>
+        <p class="helper-msg" *ngIf="control.errors!['noConnection']">
+            No idea what is happening
+        </p>
+    </div>
+    
 </div>

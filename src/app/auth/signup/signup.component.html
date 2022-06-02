@@ -5,21 +5,28 @@
         <!--<div class="titles">
             <label for="">Username:</label>
         </div>
-        <input class="input" formControlName="username">-->
-        <app-input label="Username" [control]="$any(authForm.get('username'))"></app-input>
-        {{ authForm.get('username')!.errors | json }}
-        
+        <input class="input" formControlName="username">
         <div class="titles">
             <label for="">Password:</label>
         </div>
         <input class="input" formControlName="password" />
-        {{ authForm.get('password')!.errors | json }}
         <div class="titles">
             <label for="">Password confirmation:</label>
         </div>
         <input class="input" formControlName="passwordConfirmation">
+        {{ authForm.get('username')!.errors | json }}
+        {{ authForm.get('password')!.errors | json }}
         {{ authForm.get('passwordConfirmation')!.errors | json }}
+        {{ authForm.errors | json }}-->
+        <app-input label="Username" type="text" [control]="$any(authForm.get('username'))"></app-input>
+        
+        <app-input label="Password" type="password"[control]="$any(authForm.get('password'))"></app-input>
+        
+        <app-input label="Password confirmation" type="password" [control]="$any(authForm.get('passwordConfirmation'))"></app-input>
+        
         <button class="button is-link">Submit</button>
+
         {{ authForm.errors | json }}
+        
     </form>
 </div>

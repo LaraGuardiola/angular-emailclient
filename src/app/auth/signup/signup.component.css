@@ -19,5 +19,10 @@
      font-size: 30px;
      font-weight: bold;
      white-space: nowrap;
+     margin-bottom: 1em;
+ }
+
+ button{
+     margin-top: 1.5em;
  }
 

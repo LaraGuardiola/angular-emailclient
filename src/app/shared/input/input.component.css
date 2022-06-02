@@ -2,7 +2,21 @@
     width: 360px;
 }
 
+.field:nth-child(1) {
+    margin-top: 0.5em;
+}
+
 .titles {
     width: 100%;
     font-weight: bold;
 }
+
+.input {
+    margin-top: 0.5em;
+}
+
+.helper-msg{
+    font-size: 12px;
+    color: red;
+}
+
