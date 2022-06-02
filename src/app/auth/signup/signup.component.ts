@@ -35,6 +35,17 @@ export class SignupComponent implements OnInit {
   constructor(private matchPassword: MatchPassword, private uniqueUsername: UniqueUsername) { }
 
   ngOnInit(): void {
+    window.addEventListener('load', this.resize)
+    window.addEventListener('resize', this.resize)
+  }
+
+  resize() {
+    let vh = window.innerHeight * 0.01;
+    let form = document.querySelector('.form')
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+    document.body.style.setProperty('height', `${vh * 100}px`);
+    (form as HTMLElement).style.setProperty('height', `${vh * 100}px`);
+    console.log(vh * 100)
   }
 
 }

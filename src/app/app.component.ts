@@ -15,6 +15,9 @@ export class AppComponent {
     console.log(vh * 100)
   }
 
-  ngOnInit() {window.addEventListener('load', this.resize)}
+  ngOnInit() {
+    window.addEventListener('load', this.resize)
+    window.addEventListener('resize', this.resize)
+  }
  
 }
