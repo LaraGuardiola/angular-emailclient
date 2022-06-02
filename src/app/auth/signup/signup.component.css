@@ -39,7 +39,10 @@
 
  /* make 100vh look great without scroll in mobile */
  body {
-
-    height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     height: calc(var(--vh, 1vh) * 100);
   }
