@@ -31,7 +31,6 @@ export class SignupComponent implements OnInit {
   { validators: [this.matchPassword.validate]}
   )
 
-
   constructor(private matchPassword: MatchPassword, private uniqueUsername: UniqueUsername) { }
 
   ngOnInit(): void {
