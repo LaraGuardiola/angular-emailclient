@@ -13,6 +13,6 @@ export class AppComponent {
     document.documentElement.style.setProperty('--vh', `${vh}px`);
   }
 
-  ngOnInit() {this.resize()}
+  ngOnInit() {window.addEventListener('load', this.resize)}
  
 }
