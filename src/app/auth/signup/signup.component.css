@@ -40,10 +40,8 @@
  /* make 100vh look great without scroll in mobile */
  body {
     min-height: 100vh;
-    min-height: fill-available;
     min-height: -webkit-fill-available;
-}
-html {
-    height: fill-available;
+  }
+  html {
     height: -webkit-fill-available;
-}
+  }
