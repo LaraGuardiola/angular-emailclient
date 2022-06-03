@@ -1,6 +1,6 @@
 
 <div class="field centered">
-    <form class="form" [formGroup]="authForm">
+    <form (ngSubmit)="onSubmit()" class="form" [formGroup]="authForm">
         <h2>Create an account</h2>
         <!--<div class="titles">
             <label for="">Username:</label>
