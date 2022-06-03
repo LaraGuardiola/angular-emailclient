@@ -64,9 +64,13 @@ export class SignupComponent implements OnInit {
       next: response => {
         console.log(this)
       },
+
+      //this way they can see the error message if you want to display it from any template
       error: error => {
         if(!error.status){
           this.authForm.setErrors({ noConnection: true })
+        }else{
+          this.authForm.setErrors({ unknownError: true })
         }
       },
       complete: () => {
