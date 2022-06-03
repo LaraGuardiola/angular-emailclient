@@ -48,8 +48,8 @@ export class SignupComponent implements OnInit {
     let vh = window.innerHeight * 0.01;
     let form = document.querySelector('.form')
     document.documentElement.style.setProperty('--vh', `${vh}px`);
-    document.body.style.setProperty('height', `${vh * 100}px`);
-    (form as HTMLElement).style.setProperty('height', `${vh * 100}px`);
+    document.body.style.setProperty('height', `${(vh * 100)}px`);
+    (form as HTMLElement).style.setProperty('height', `${(vh * 100)}px`);
     console.log(vh * 100)
   }
 
