@@ -23,7 +23,7 @@ export class AuthService {
   }
 
   signup(credentials: SignupCredentials) {
-    return this.http.post<any>(
+    return this.http.post<SignupResponse>(
       `${this.baseURL}signup`, 
       credentials
     )

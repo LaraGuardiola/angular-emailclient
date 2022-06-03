@@ -58,10 +58,22 @@ export class SignupComponent implements OnInit {
       return;
     }
 
-    this.authService.signup(this.authForm.value)
-      .subscribe((response) => {
-        console.log(response)
-      })
+    //some RxJS
+
+    this.authService.signup(this.authForm.value).subscribe({
+      next: response => {
+        console.log(this)
+      },
+      error: error => {
+        if(!error.status){
+          this.authForm.setErrors({ noConnection: true })
+        }
+      },
+      complete: () => {
+        console.log('complete')
+      }
+    })
+      
   }
 
 }

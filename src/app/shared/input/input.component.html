@@ -8,18 +8,17 @@
             value is required
         </p>
         <p class="helper-msg" *ngIf="control.errors!['minlength']">
-            value you entered is 
-            {{ control.errors!['minlength'].actualLength }}
-            characters long, minimum
+            Current characters:
+            {{ control.errors!['minlength'].actualLength }} /
+            Minimum characters:
             {{ control.errors!['minlength'].requiredLength }}
-            characters
         </p>
         <p class="helper-msg" *ngIf="control.errors!['maxlength']">
-            value you entered is 
-            {{ control.errors!['maxlength'].actualLength }}
-            characters long, but cannot be longer than
+            Current characters:
+            {{ control.errors!['maxlength'].actualLength }} /
+            Max characters:
             {{ control.errors!['maxlength'].requiredLength }}
-            characters
+            
         </p>
         <p class="helper-msg" *ngIf="control.errors!['pattern']">
             Invalid format
